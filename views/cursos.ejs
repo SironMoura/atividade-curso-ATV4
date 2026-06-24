@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cursos</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<h1>Cadastro de Cursos</h1>
+
+<a href="/">Página Inicial</a>
+
+|
+<a href="/novo">Adicionar Curso</a>
+
+<hr>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>Nome</th>
+    <th>Sigla</th>
+    <th>Coordenador</th>
+    <th>Ações</th>
+</tr>
+
+<% cursos.forEach(curso => { %>
+
+<tr>
+
+<td><%= curso.nome %></td>
+
+<td><%= curso.sigla %></td>
+
+<td><%= curso.coordenador %></td>
+
+<td>
+
+<a href="/curso/<%= curso.id %>">
+Ver
+</a>
+
+|
+
+<a href="/editar/<%= curso.id %>">
+Editar
+</a>
+
+|
+
+<form
+action="/excluir/<%= curso.id %>"
+method="POST"
+style="display:inline;"
+>
+
+<button type="submit">
+Excluir
+</button>
+
+</form>
+
+</td>
+
+</tr>
+
+<% }) %>
+
+</table>
+
+</body>
+</html>

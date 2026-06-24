@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Curso</title>
+</head>
+
+<body>
+
+<h1>
+
+<%= curso ? 'Editar Curso' : 'Novo Curso' %>
+
+</h1>
+
+<form
+
+action="<%= curso ? '/editar/' + curso.id : '/cursos' %>"
+
+method="POST"
+
+>
+
+<label>Nome</label>
+
+<br>
+
+<input
+type="text"
+name="nome"
+value="<%= curso ? curso.nome : '' %>"
+required
+>
+
+<br><br>
+
+<label>Sigla</label>
+
+<br>
+
+<input
+type="text"
+name="sigla"
+value="<%= curso ? curso.sigla : '' %>"
+required
+>
+
+<br><br>
+
+<label>Coordenador</label>
+
+<br>
+
+<input
+type="text"
+name="coordenador"
+value="<%= curso ? curso.coordenador : '' %>"
+required
+>
+
+<br><br>
+
+<label>Descrição</label>
+
+<br>
+
+<textarea
+name="descricao"
+required
+><%= curso ? curso.descricao : '' %></textarea>
+
+<br><br>
+
+<button type="submit">
+
+Salvar
+
+</button>
+
+</form>
+
+<br>
+
+<a href="/cursos">
+
+Voltar
+
+</a>
+
+</body>
+</html>

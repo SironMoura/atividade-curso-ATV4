@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nome": "Tecnologia em Sistemas para Internet",
+    "sigla": "TSI",
+    "coordenador": "Joice",
+    "descricao": "Curso voltado ao desenvolvimento web."
+  },
+  {
+    "id": 2,
+    "nome": "Bacharelado em Sistemas de Informação",
+    "sigla": "BSI",
+    "coordenador": "Aujor",
+    "descricao": "Curso focado em sistemas corporativos."
+  }
+]
